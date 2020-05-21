@@ -8,7 +8,7 @@ class ReservationForm extends Component {
       name: '',
       date: '',
       time: '',
-      numberGuests: '',
+      number: '',
       id: ''
     }
   }
@@ -57,7 +57,7 @@ class ReservationForm extends Component {
           <input
             required
             onChange={this.trackInput}
-            id="numberGuests"
+            id="number"
             placeholder="Number of Guests"
             className="reservation-input"
           />
