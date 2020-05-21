@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReservationContainer from '../ReservationContainer/ReservationContainer';
+import {getReservations} from '../apiCalls';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      reservations: []
+    }
+  }
+
+  componentDidMount = async () => {
+    getReservations()
+      .then(data => this.setState({reservations: data}))
+      .catch(err => console.error(err));
+  }
+
   render() {
     return (
       <div className="App">
@@ -10,7 +25,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <ReservationContainer reservations={this.state.reservations} />
         </div>
       </div>
     )
