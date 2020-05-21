@@ -1,1 +1,14 @@
- 
+.reservation-card {
+  background-color: white;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}
+
+.reservation-header {
+  border-bottom: 2px solid black;
+  width: 80%;
+  text-align: center;
+}
