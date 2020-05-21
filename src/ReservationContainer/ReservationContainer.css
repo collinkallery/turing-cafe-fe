@@ -1,0 +1,11 @@
+.reservation-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
+  width: 90%;
+  height: 70%;
+  overflow: scroll;
+  background-color: black;
+  opacity: 80%;
+  padding: 1%;
+}
