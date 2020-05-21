@@ -12,12 +12,15 @@ const ReservationContainer = ({reservations}) => {
         date={reservation.date}
         time={reservation.time}
         number={reservation.number}
+        key={reservation.id}
       />
     )
   })
 
   return (
-    <p>{reservationsToDisplay}</p>
+    <section className="reservation-container">
+      {reservationsToDisplay}
+    </section>
   )
 }
 
